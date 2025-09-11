@@ -12,7 +12,7 @@ def register_user(request):
     serializer = UserSerializer(data=request.data)
     if serializer.is_valid():
         user = serializer.save()
-        # Crear un perfil de usuario por defecto (puedes cambiar el rol por defecto)
+        # aqui para crear un perfil de usuario por defecto 
         UserProfile.objects.create(user=user, role='buyer')
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

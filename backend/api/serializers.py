@@ -32,7 +32,7 @@ class DocumentSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class TransactionSerializer(serializers.ModelSerializer):
-    # Esto mostrará los detalles del comprador y vendedor, no solo su ID
+    # Esto mostrará los detalles del comprador y vendedor en general no solo su id
     buyer = UserSerializer(read_only=True)
     seller = UserSerializer(read_only=True)
     documents = DocumentSerializer(many=True, read_only=True)  # Para incluir docs en la respuesta

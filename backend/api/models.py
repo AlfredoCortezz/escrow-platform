@@ -4,7 +4,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 
 # Create your models here.
 class UserProfile(models.Model):
-    # Este modelo extiende el User por defecto de Django para añadir el rol
+    # Este modelo extiende el User por defecto de Django para añadir el rol de cada persona que ingrese 
     USER_ROLES = (
         ('buyer', 'Comprador'),
         ('seller', 'Vendedor'),
